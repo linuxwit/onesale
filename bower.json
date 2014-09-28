@@ -1,0 +1,13 @@
+{
+  "name": "ng-requirejs-seed",
+  "version": "1.0.0",
+  "dependencies": {
+    "angular": "1.2.16",
+    "jquery": "2.1.0",
+    "bootstrap": "3.1.1",
+    "angular-route": "1.2.15",
+    "angular-ui": "*",
+    "requirejs": "2.1.11"
+  },
+  "devDependencies": {}
+}

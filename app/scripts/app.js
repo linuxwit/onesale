@@ -1,13 +1,15 @@
 define([
   'angular',
-  'ngRoute',
+  'uiRoute',
+  'uiBootstrap',
   'controllers/index',
   'directives/index',
   'services/index',
   'filters/index'
 ], function(ng) {
   return ng.module('app', [
-    'ngRoute',
+    'ui.router',
+    'ui.bootstrap',
     'app.controllers',
     'app.directives',
     'app.services',

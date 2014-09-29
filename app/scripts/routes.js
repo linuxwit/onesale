@@ -1,24 +1,17 @@
-define(['angular', 'app'], function(angular, app) {
+define(['app'], function(app) {
     'use strict';
-    app.config(['$stateProvider', '$urlRouterProvider'
-
-        function($stateProvider, $urlRouterProvider) {
-
-            console.log('hello');
+    app.config(['$locationProvider', '$stateProvider', '$urlRouterProvider',
+        function($locationProvider, $stateProvider, $urlRouterProvider) {
             $stateProvider.state('main', {
                 url: '/',
                 templateUrl: 'views/main.html'
-            })
-            /*       $routeProvider.when('/login', {
+            }).state('login', {
+                url: '/login',
                 templateUrl: 'views/login.html',
                 controller: 'LoginCtrl'
-            }).when('/', {
-                templateUrl: 'views/main.html',
-                controller: 'MainCtrl'
-            }).otherwise({
-                redirectTo: '/'
-            });*/
+            });
             //$locationProvider.html5Mode(true);
+            $urlRouterProvider.otherwise('/');
         }
     ]);
 });

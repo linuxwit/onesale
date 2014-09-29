@@ -11,10 +11,12 @@ require.config({
             exports: 'angular'
         },
         //ngRoute: ['angular'],
-        uiRoute: ['angular'],
+        uiRouter: {
+            deps: ['angular']
+        },
         uiBootstrap: ['angular']
     }
 });
-require(['angular', 'app'], function(ng) {
+require(['angular', 'routes','app'], function(ng) {
     ng.bootstrap(window.document, ['app']);
 });

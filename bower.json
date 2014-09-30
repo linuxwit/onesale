@@ -1,25 +1,22 @@
 {
-  "name": "onsale",
-  "private": true,
-  "version": "1.0",
-  "description": "one sale",
-  "dependencies": {
-    "angular": "*",
-    "bootstrap": "*",
-    "angular-route": "*",
-    "angular-ui": "*",
-    "requirejs": "*",
-    "angular-bootstrap": "*",
-    "angular-animate": "*",
-    "angular-cookie": "*",
-    "font-awesome":"*",
-    "angular-ui-router":"*"
-  },
-  "authors": [
-    "witwave <376300248@qq.com>"
-  ],
-  "moduleType": [
-    "amd"
-  ],
-  "devDependencies": {}
+    "name": "onsale",
+    "private": true,
+    "version": "1.0",
+    "description": "one sale",
+    "dependencies": {
+        "angular": "*",
+        "bootstrap": "*",
+        "angular-route": "*",
+        "angular-ui": "*",
+        "requirejs": "*",
+        "angular-bootstrap": "*",
+        "angular-animate": "*",
+        "angular-cookie": "*",
+        "font-awesome": "*",
+        "angular-ui-router": "*",
+        "requirejs-domready": "*"
+    },
+    "authors": ["witwave <376300248@qq.com>"],
+    "moduleType": ["amd"],
+    "devDependencies": {}
 }

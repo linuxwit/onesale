@@ -2,7 +2,7 @@ define(['app'], function(app) {
     'use strict';
     app.config(['$locationProvider', '$stateProvider', '$urlRouterProvider',
         function($locationProvider, $stateProvider, $urlRouterProvider) {
-            $urlRouterProvider.otherwise('/dashboard');
+            $urlRouterProvider.otherwise('dashboard');
             $stateProvider.state('dashboard', {
                 url: '/dashboard',
                 templateUrl: 'views/dashboard.html'

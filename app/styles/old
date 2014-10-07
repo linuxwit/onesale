@@ -1,125 +1,8 @@
 @import"../bower_components/bootstrap/dist/css/bootstrap.css";
 @import"../bower_components/font-awesome/css/font-awesome.css";
-@import"./timeline.css";
-.nav, .pagination, .carousel, .panel-title a {
-    cursor: pointer;
-}
-.device-preview {
-    position: absolute;
-    right: 0;
-    z-index: 1;
-    width: 380px;
-    height: 810px;
-    background: url("../images/phone-case.png") no-repeat right top;
-}
-div.screen-bg {
-    opacity: 1 !important;
-}
-.device-preview > div {
-    position: absolute;
-    top: 104px;
-    left: 33px;
-    z-index: 0;
-    width: 328px;
-    height: 576px;
-    border: 4px solid #22272d;
-    background-color: white;
-    opacity: 0;
-    transition: opacity 0.2s ease-in-out;
-}
 .modal-footer {
     border-top: 0px;
 }
-.device-preview > div.active-preview {
-    z-index: 100;
-    opacity: 1;
-}
-.bar {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    position: absolute;
-    right: 0;
-    left: 0;
-    z-index: 10;
-    box-sizing: border-box;
-    padding: 5px;
-    width: 100%;
-    height: 44px;
-    border-width: 0;
-    border-style: solid;
-    border-top: 1px solid transparent;
-    border-bottom: 1px solid #ddd;
-    background-color: white;
-    /* border-width: 1px will actually create 2 device pixels on retina; */
-
-background-size: 0;
-}
-.bar-header {
-    top: 0;
-    border-top-width: 0;
-    border-bottom-width: 1px;
-}
-.bar .title {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 0;
-    overflow: hidden;
-    margin: 0 10px;
-    min-width: 30px;
-    height: 43px;
-    text-align: center;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    font-size: 17px;
-    line-height: 44px;
-}
-.device-preview .content {
-    position: relative;
-}
-.has-header {
-    top: 44px;
-}
-.content {
-    position: relative;
-}
-.jumbotron {
-    margin-bottom: 0px;
-}
-.navbar-brand {
-    padding-left: 0px;
-}
-.media {
-    background: none repeat scroll 0 0 #363d40;
-    color: #CCC;
-}
-.media-heading {
-    border-bottom: 1px solid #4d5559;
-    color: #b4bbbf;
-    padding: 10px 20px;
-}
-.tab-content{
-    margin:auto 10px;
-}
-input.ng-invalid,textarea.ng-invalid {
-  border: 1px solid red;
-}
-input.ng-valid {
-  border: 1px solid green;
-}
-
 body {
     /*background-color: #f8f8f8;*/
 
@@ -133,7 +16,7 @@ background: none repeat scroll 0 0 #393939;
 }
 #page-wrapper {
     padding: 0 15px;
-    min-height: 800px;
+    min-height: 568px;
     background-color: #fbfbfb;
 }
 @media(min-width: 768px) {
@@ -141,6 +24,8 @@ background: none repeat scroll 0 0 #393939;
         position: inherit;
         margin: 0 0 0 180px;
         padding: 0 30px;
+        padding-left: 0px;
+        padding-right: 0px;
         border-left: 1px solid #e7e7e7;
    }
 }
@@ -384,8 +269,4 @@ table.dataTable thead .sorting: after {
 .page-nav-header {
     background-color: #fbfbfb;
     border-bottom: 1px solid #CCC;
-    margin-bottom: 16px;
-}
-.toolbar-header {
-    padding-top: 10px;
 }

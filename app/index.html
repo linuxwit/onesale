@@ -1,17 +1,30 @@
 <!doctype html>
-<html lang="zh_cn">
+<html lang="zh-CN">
     <head>
         <meta charset="utf-8">
         <meta charset="utf-8">
         <meta name=viewport content="width=device-width, initial-scale=1">
-        <title>angular</title>
+        <title>OneSale</title>
         <link rel="stylesheet" href="styles/style.css">
-        <script src="bower_components/requirejs/require.js" data-main="scripts/main"></script>
     </head>
     <body>
         <div id="wrapper">
+            <!--[if lte IE 9]>
+                <div class="text-warning">
+                        <button data-dismiss="alert" class="close" type="button">×</button>
+                        <strong>您正在使用低版本浏览器，</strong> 在本页面的显示效果可能有差异。
+                        建议您升级到
+                        <a href="http://www.google.cn/intl/zh-CN/chrome/" target="_blank">Chrome</a>
+                        或以下浏览器：
+                        <a href="www.mozilla.org/en-US/firefox/‎" target="_blank">Firefox</a> /
+                        <a href="http://www.apple.com.cn/safari/" target="_blank">Safari</a> /
+                        <a href="http://www.opera.com/" target="_blank">Opera</a> /
+                        <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank">
+                            Internet Explorer 10</a>
+                </div>
+            <![endif]-->
             <!-- Navigation -->
-            <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0" id="header">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -19,82 +32,47 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">SB Admin v2.0</a>
+                    <a class="navbar-brand" href="#/dahboard">OneSale</a>
                 </div>
                 <!-- /.navbar-header -->
                 <ul class="nav navbar-top-links navbar-right">
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                        </a>
-                        <ul class="dropdown-menu dropdown-messages">
-                            <li>
-                                <a href="#">
-                                <div>
-                                    <strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                    <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                                </a>
-                            </li>
-                        </ul>
-                        <!-- /.dropdown-messages -->
-                    </li>
                     <!-- /.dropdown -->
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-tasks fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                        <a class="dropdown-toggle">
+                        <i class="fa fa-plus fa-fw"></i>新建
                         </a>
-                        <ul class="dropdown-menu dropdown-tasks">
+                        <ul class="dropdown-menu dropdown-user" ng-click="$event.stopPropagation()">
                             <li>
-                                <a href="#">
-                                <div>
-                                    <p>
-                                    <strong>Task 1</strong>
-                                    <span class="pull-right text-muted">40% Complete</span>
-                                    </p>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                            <span class="sr-only">40% Complete (success)</span>
-                                        </div>
-                                    </div>
-                                </div>
+                                <a href="#/course/add"><i class="fa fa-tasks fa-fw"></i> 新建课程
                                 </a>
                             </li>
+                            <li class="divider"></li>
+                            <li><a href="#/teacher/add"><i class="fa fa-user-md fa-fw"></i> 新建讲师</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="#/student/add"><i class="fa fa-user fa-fw"></i> 新建学员</a>
+                            </li>
                         </ul>
-                        <!-- /.dropdown-tasks -->
+                        <!-- /.dropdown-user -->
                     </li>
                     <!-- /.dropdown -->
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-bell fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    <li>
+                        <a href="#/dashboard/newest">
+                        <i class="fa fa-bell fa-fw"></i>
                         </a>
-                        <ul class="dropdown-menu dropdown-alerts">
-                            <li>
-                                <a href="#">
-                                <div>
-                                    <i class="fa fa-comment fa-fw"></i> New Comment
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                                </a>
-                            </li>
-                        </ul>
-                        <!-- /.dropdown-alerts -->
                     </li>
                     <!-- /.dropdown -->
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                         </a>
-                        <ul class="dropdown-menu dropdown-user">
-                            <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        <ul class="dropdown-menu dropdown-user" ng-click="$event.stopPropagation()">
+                            <li><a href="#/account/setting"><i class="fa fa-user fa-fw"></i> 帐户设置</a>
                             </li>
-                            <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                            <li><a href="#/team/main"><i class="fa fa-sitemap fa-fw"></i> 团队管理</a>
                             </li>
                             <li class="divider"></li>
-                            <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            <li><a href="#/passport/logout"><i class="fa fa-sign-out fa-fw"></i> 安全退出</a>
                             </li>
                         </ul>
                         <!-- /.dropdown-user -->
@@ -102,34 +80,13 @@
                     <!-- /.dropdown -->
                 </ul>
                 <!-- /.navbar-top-links -->
-                <div class="navbar-default sidebar" role="navigation">
-                    <div class="sidebar-nav navbar-collapse">
-                        <ul class="nav" id="side-menu">
-                            <li>
-                                <a class="active" href="#/dashboard" ><i class="fa fa-dashboard fa-fw"></i> 工作台</a>
-                            </li>
-                            <li>
-                                <a href="#/course"><i class="fa fa-file fa-fw"></i> 课程</a>
-                            </li>
-                            <li>
-                                <a ui-sref="courese"><i class="fa fa-sitemap fa-fw"></i> 课程<span class="fa arrow"></span></a>
-                                <ul class="nav nav-second-level">
-                                    <li>
-                                        <a href="#">Second Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Second Level Item</a>
-                                    </li>
-                                </ul>
-                                <!-- /.nav-second-level -->
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- /.sidebar-collapse -->
+                <div class="navbar-default sidebar" role="navigation" id='sidebar' ng-include="'views/main/sidebar.html'">
+                    sidebar
                 </div>
                 <!-- /.navbar-static-side -->
             </nav>
             <div id="page-wrapper" ui-view>
+                Loading...
             </div>
             <!-- /#page-wrapper -->
         </div>
@@ -137,5 +94,6 @@
         <!-- Use this for product -->
         <!--<script src="scripts/build.js"></script>-->
         <!-- Use this for development -->
+        <script src="bower_components/requirejs/require.js" data-main="scripts/main"></script>
     </body>
 </html>

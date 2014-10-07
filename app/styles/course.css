@@ -1,0 +1,8 @@
+.device-preview-page .device-preview {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    width: 380px;
+    height: 810px;
+    background: url("../images/phone-case.png") no-repeat right top;
+}

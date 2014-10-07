@@ -13,8 +13,9 @@
         "angular-animate": "*",
         "angular-cookie": "*",
         "font-awesome": "*",
-        "angular-ui-router": "*",
-        "requirejs-domready": "*"
+        "ui-router": "*",
+        "requirejs-domready": "*",
+        "angular-cookies":"1.2"
     },
     "authors": ["witwave <376300248@qq.com>"],
     "moduleType": ["amd"],

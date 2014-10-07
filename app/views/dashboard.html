@@ -1,11 +1,190 @@
+
 <div class="row">
-    <div class="col-lg-12">
-        <h1 class="page-header">Dashboard</h1>
+    <div class="col-lg-12 page-nav-header">
+        <div class="navbar-header">
+            <sapn class="navbar-brand">
+            <i class="fa fa-dashboard fa-fw"></i> 工作台
+            </sapn>
+        </div>
     </div>
     <!-- /.col-lg-12 -->
 </div>
+
 <div class="row">
-    {{'abc'|cap}}
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-users fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">26</div>
+                        <div>学员数</div>
+                    </div>
+                </div>
+            </div>
+            <a href="#">
+            <div class="panel-footer">
+                <span class="pull-left"></span>
+                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                <div class="clearfix"></div>
+            </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-green">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-tasks fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">12</div>
+                        <div>课程数</div>
+                    </div>
+                </div>
+            </div>
+            <a href="#">
+            <div class="panel-footer">
+                <span class="pull-left"></span>
+                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                <div class="clearfix"></div>
+            </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-yellow">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-shopping-cart fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">124</div>
+                        <div>讲师数</div>
+                    </div>
+                </div>
+            </div>
+            <a href="#">
+            <div class="panel-footer">
+                <span class="pull-left"></span>
+                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                <div class="clearfix"></div>
+            </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-red">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-support fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">13</div>
+                        <div>报名数</div>
+                    </div>
+                </div>
+            </div>
+            <a href="#">
+            <div class="panel-footer">
+                <span class="pull-left"></span>
+                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                <div class="clearfix"></div>
+            </div>
+            </a>
+        </div>
+    </div>
 </div>
-<a ui-sref="party">Go To Party</a>
-<a ui-sref="partyDetail({ partyID: id, partyLocation: location })">See the Party</a>
+<div class="row">
+    <div class="col-lg-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <i class="fa fa-bell fa-fw"></i>最新动态
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <div class="panel-body">
+                    <div class="list-group">
+                        <a class="list-group-item" href="#">
+                        <i class="fa fa-comment fa-fw"></i>张三签到了大师行课程
+                        <span class="pull-right text-muted small"><em>4 分钟前</em>
+                        </span>
+                        </a>
+                        <a class="list-group-item" href="#">
+                        <i class="fa fa-twitter fa-fw"></i> 张三报名了大师行课程
+                        <span class="pull-right text-muted small"><em>３ 天前</em>
+                        </span>
+                        </a>
+                        <a class="list-group-item" href="#">
+                        <i class="fa fa-twitter fa-fw"></i> 王总报名了大师行课程
+                        <span class="pull-right text-muted small"><em>３ 天前</em>
+                        </span>
+                        </a>
+                        <a class="list-group-item" href="#">
+                        <i class="fa fa-twitter fa-fw"></i> 李四报名了大师行课程
+                        <span class="pull-right text-muted small"><em>３ 天前</em>
+                        </span>
+                        </a>
+                    </div>
+                    <!-- /.list-group -->
+                    <a class="btn btn-default btn-block" href="#">查看所有动态</a>
+                </div>
+                <!-- /.table-responsive -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-6 -->
+    <div class="col-lg-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                最新课程
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>课程名称</th>
+                                <th>主要讲师</th>
+                                <th>时间</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>大师行</td>
+                                <td>张大帅</td>
+                                <td>2014-10-01 9:00</td>
+                            </tr>
+                            <tr>
+                                <td>２</td>
+                                <td>大师行</td>
+                                <td>张大帅</td>
+                                <td>2014-10-01 9:00</td>
+                            </tr>
+                            <tr>
+                                <td>３</td>
+                                <td>大师行</td>
+                                <td>张大帅</td>
+                                <td>2014-10-01 9:00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.table-responsive -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-6 -->
+</div>

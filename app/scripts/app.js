@@ -1,18 +1,24 @@
 define([
-  'angular',
-  'uiRoute',
-  'uiBootstrap',
-  'controllers/index',
-  'directives/index',
-  'services/index',
-  'filters/index'
+    'angular',
+    'uiBootstrap',
+    'uiRoute',
+    'ngCookies',
+    'controllers/index',
+    'directives/index',
+    'services/index',
+    'filters/index'
 ], function(ng) {
-  return ng.module('app', [
-    'ui.router',
-    'ui.bootstrap',
-    'app.controllers',
-    'app.directives',
-    'app.services',
-    'app.filters'
-  ]);
+   var app = ng.module("app", [
+      'ui.bootstrap',
+      'ui.router',
+      'ipCookie',
+      'app.services',
+      'app.controllers',
+      'app.filters',
+      'app.directives'
+      ]);
+      app.run(function (api) {
+        api.init();
+      }); 
+      return app;
 });

@@ -1,0 +1,45 @@
+<div class="row">
+    <div class="col-lg-12 page-nav-header">
+        <div class="navbar-header">
+            <sapn class="navbar-brand">
+            <i class="fa fa-user-md fa-fw"></i> 讲师
+            </sapn>
+        </div>
+        <div class="toolbar-header">
+            <a class="btn btn-default btn-circle pull-right" title="添加讲师"  href="#/teacher/add"> <i class="fa fa-plus"></i></a>
+        </div>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<div class="row">
+    <div class="col-md-4" ng-repeat="teacher in teachers">
+        <div class="media thumbnail" >
+            <a class="pull-left" href="#">
+            <img class="media-object img-responsive" ng-src="{{teacher.avatar}}">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">{{teacher.name}}</h4>
+                <ul class="list-unstyled">
+                    <li>
+                        {{teacher.company}}
+                    </li>
+                    <li>
+                        {{teacher.title}}
+                    </li>
+                    <li>
+                        {{teacher.summary}}
+                    </li>
+                    <li>
+                        {{teacher.mobile}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="pull-left pagination">
+            讲师数：{{totalItems}}，当前页：{{currentPage}}
+        </div>
+        <pagination boundary-links="true" total-items="totalItems" ng-model="currentPage" class="pagination pull-right" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;" ng-change="pageChanged()"></pagination>
+    </div>
+</div>

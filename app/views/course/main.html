@@ -1,1 +1,31 @@
-course main page
+<div class="row">
+    <div class="col-lg-12 page-nav-header">
+        <div class="navbar-header">
+            <sapn class="navbar-brand">
+            <i class="fa fa-tasks fa-fw"></i> 课程
+            </sapn>
+        </div>
+        <div class="toolbar-header">
+            <a class="btn btn-default btn-circle pull-right" title="添加讲师"  href="#/course/add"> <i class="fa fa-plus"></i></a>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-6 col-md-3" ng-repeat="course in courses">
+        <div class="thumbnail">
+            <a href="#">
+            <img ng-src="{{course.cover}}" alt="">
+            </a>
+            <h5 class="text-center">{{course.title}}</h5>
+            <p>
+            <span>{{course.createDate}}</span><span class="pull-right">{{course.studentCount}}人报名</span>
+            </p>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="pull-left pagination">
+            课程数：{{totalItems}}，当前页：{{currentPage}}
+        </div>
+        <pagination boundary-links="true" total-items="totalItems" ng-model="currentPage" class="pagination pull-right" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;" ng-change="pageChanged()"></pagination>
+    </div>
+</div>

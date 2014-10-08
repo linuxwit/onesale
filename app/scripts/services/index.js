@@ -1,6 +1,8 @@
 define([
-	'services/authorization', 
-	'services/api'], 
+	'services/authorization',
+	'services/httpInterceptor',
+	'services/SessionService'
+	], 
 	function() {
 
 	}

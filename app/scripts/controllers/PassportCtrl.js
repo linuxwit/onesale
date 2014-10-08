@@ -1,22 +1,17 @@
 define(["./module"], function(mod) {
-    mod.controller('PassportCtrl', ['$scope', '$location', '$cookieStore', 'authorization', 'api',
-        function($scope, $location, $cookieStore, authorization, api) {
+    mod.controller('PassportCtrl', ['$scope', '$location',
+        function($scope, $location) {
+            $scope.loginData = {
+                userName: "",
+                password: ""
+            };
+            $scope.message = "";
             $scope.login = function() {
-                var credentials = {
-                    username: this.username,
-                    token: this.token
-                };
-
-                var success = function(data) {
-                    var token = data.token;
-                    api.init(token);
-                    $cookieStore.put('token', token);
-                    $location.path('/');
-                };
-                var error = function() {
-                    // TODO: apply user notification here..
-                };
-                authorization.login(credentials).success(success).error(error);
+                authService.login($scope.loginData).then(function(response) {
+                    $location.path('/orders');
+                }, function(err) {
+                    $scope.message = err.error_description;
+                });
             };
         }
     ])

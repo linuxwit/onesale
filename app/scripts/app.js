@@ -16,9 +16,8 @@ define([
       'app.controllers',
       'app.filters',
       'app.directives'
-      ]);
-      app.run(function (api) {
-        api.init();
-      }); 
+      ]).config(['$httpProvider', function($httpProvider) {
+          $httpProvider.interceptors.push('httpInterceptor');
+      }]).constant('API_SERVER', 'http://127.0.0.1:5000/api/');;
       return app;
 });

@@ -15,7 +15,9 @@
         "font-awesome": "*",
         "ui-router": "*",
         "requirejs-domready": "*",
-        "angular-cookies":"1.2"
+        "angular-cookies":"1.2",
+        "angular-local-storage":"*",
+        "angular-loading-bar":"*"
     },
     "authors": ["witwave <376300248@qq.com>"],
     "moduleType": ["amd"],

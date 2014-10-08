@@ -6,6 +6,10 @@ define(['services/module',
                     isLogged: false,
                     username: ''
                 };
+                
+                $http.get('https://api.github.com/users/naorye/repos').then(function(response) {
+                    console.log(response);
+                }
                 return sdo;
             }
         ]);

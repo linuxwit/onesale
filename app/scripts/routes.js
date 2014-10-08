@@ -1,7 +1,7 @@
 define(['app'], function(app) {
     'use strict';
-    app.config(['$stateProvider', '$urlRouterProvider',
-        function($stateProvider, $urlRouterProvider) {
+    app.config(['$stateProvider', '$urlRouterProvider','$httpProvider',
+        function($stateProvider, $urlRouterProvider,$httpProvider) {
 
            // $urlRouterProvider.responseInterceptors.push('httpInterceptor');
 
@@ -17,19 +17,11 @@ define(['app'], function(app) {
             }).state('dashboard', {
                 url: '/dashboard',
                 templateUrl: 'views/dashboard.html',
-<<<<<<< HEAD
-                controller:'MainCtrl'
-            }).state('login', {
-                url: '/login',
-                templateUrl: 'views/login.html',
-                controller: 'LoginCtrl'
-=======
                 controller: 'DashboardCtrl'
             }).state('dashboardNewest',{
                 url:'/dashboard/newest',
                 templateUrl:'views/dashboard/newest.html',
                 controller:'DashboardCtrl'
->>>>>>> de368cd8153b7785b157c29225f362765bcd2ce4
             }).state('course', {
                 url: '/course',
                 templateUrl: 'views/course/main.html',
@@ -91,7 +83,7 @@ define(['app'], function(app) {
 */
             //http://plnkr.co/edit/IzimSVsstarlFviAm7S7?p=preview
             //http://scotch.io/tutorials/javascript/angular-routing-using-ui-router#reader-mode
-            //$locationProvider.html5Mode(true);
+            $httpProvider.html5Mode(true);
         }
     ]);
 });

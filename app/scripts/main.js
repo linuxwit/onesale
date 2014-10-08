@@ -17,19 +17,6 @@ require.config({
         'uiRoute': {
             deps: ['angular']
         },
-<<<<<<< HEAD
-        uiBootstrap: ['angular']
-    }
-});
-/*require(['require', 'angular','routes', 'app'], function(ng) {
-      ng.bootstrap(window.document, ['app']);
-});*/
-define(['require', 'angular', 'routes', 'app'], function(require, angular, app) {
-    'use strict';
-    require(['domReady!'], function(document) {
-        angular.bootstrap(document, ['app']);
-    });
-=======
         'uiBootstrap': {
             deps: ['angular']
         },
@@ -38,5 +25,4 @@ define(['require', 'angular', 'routes', 'app'], function(require, angular, app) 
         }
     },
     deps: ['./bootstrap']
->>>>>>> de368cd8153b7785b157c29225f362765bcd2ce4
 });

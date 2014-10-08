@@ -21,10 +21,9 @@ require.config({
 /*require(['require', 'angular','routes', 'app'], function(ng) {
       ng.bootstrap(window.document, ['app']);
 });*/
-define(['require', 'angular','routes', 'app'], function(require, angular, app) {
+define(['require', 'angular', 'routes', 'app'], function(require, angular, app) {
     'use strict';
     require(['domReady!'], function(document) {
-        console.log('domReady');
-        angular.bootstrap(window.document, ['app']);
+        angular.bootstrap(document, ['app']);
     });
 });

@@ -5,7 +5,8 @@ define(['app'], function(app) {
             $urlRouterProvider.otherwise('dashboard');
             $stateProvider.state('dashboard', {
                 url: '/dashboard',
-                templateUrl: 'views/dashboard.html'
+                templateUrl: 'views/dashboard.html',
+                controller:'MainCtrl'
             }).state('login', {
                 url: '/login',
                 templateUrl: 'views/login.html',

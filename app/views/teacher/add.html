@@ -1,0 +1,145 @@
+<div class="row">
+    <div class="col-lg-12 page-nav-header">
+        <div class="navbar-header">
+            <sapn class="navbar-brand">
+            <i class="fa fa-user fa-fw"></i> 新增讲师
+            </sapn>
+        </div>
+        <div class="toolbar-header">
+            <!--a class="btn btn-default btn-circle pull-right" title="添加讲师" href="#/teacher/add"> <i class="fa fa-plus"></i></a-->
+            <!-- Single button -->
+            <div class="btn-group pull-right hide" dropdown is-open="status.isopen">
+                <button type="button" class="btn btn-default btn-circle dropdown-toggle " title="添加讲师" >
+                <i class="fa fa-plus"></i>
+                </button>
+                <div class="dropdown-menu" role="menu" onclick="event.stopPropagation()">
+                    <form role="form" style="width:300px;padding:10px">
+                        <div class="form-group" >
+                            <label>讲师姓名</label>
+                            <input class="form-control" >
+                        </div>
+                        <div class="form-group">
+                            <label>讲师简介</label>
+                            <textarea  class="form-control"></textarea>
+                        </div>
+                        <hr/>
+                        <button class="btn btn-success"  type="submit">提交</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<div class="row">
+    <div class="col-lg-8 col-md-8">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                基本信息
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form role="form" name="teacher_from" novalidate ng-submit="doSaveTeacher()">
+                            <div class="form-group">
+                                <label>讲师姓名</label>
+                                <input class="form-control" placeholder="请输入讲师姓名" ng-model="teacherFrom.name"  name="name" ng-minlength="1" ng-maxlength="30" required/>
+                                <div class="error" ng-show="teacher_from.name.$dirty && teacher_from.name.$invalid">
+                                    <small class="error" ng-show="teacher_from.name.$error.required">
+                                    讲师姓名不能不填哟
+                                    </small>
+                                    <small class="error" ng-show="teacher_from.name.$error.maxlength">
+                                    长度太长了
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>讲师简介</label>
+                                <textarea class="form-control" placeholder="请输入讲师专长" ng-model="teacherFrom.summary"  name="summary" ng-minlength="10" ng-maxlength="300" ></textarea>
+                                <div class="error" ng-show="teacher_from.summary.$dirty && teacher_from.summary.$invalid">
+                                    <small class="error" ng-show="teacher_from.summary.$error.required">
+                                    讲师简介不能不填
+                                    </small>
+                                    <small class="error" ng-show="teacher_from.summary.$error.minlength">
+                                    长度太短
+                                    </small>
+                                    <small class="error" ng-show="teacher_from.summary.$error.maxlength">
+                                    长度太长
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>讲师图像</label>
+                                <input type="file">
+                            </div>
+                            <hr/>
+                            <button class="btn btn-success" type="submit">提交</button>
+                        </form>
+                    </div>
+                    <!-- /.col-lg-6 (nested) -->
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                图文信息
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form role="form">
+                            <div class="form-group">
+                                <label>文字</label>
+                                <textarea class="form-control"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>图片</label>
+                                <input type="file">
+                            </div>
+                            <hr/>
+                            <button class="btn btn-success" type="submit">添加</button>
+                        </form>
+                    </div>
+                    <!-- /.col-lg-6 (nested) -->
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-4  col-sm-5 main-content">
+        <div class="device-preview fixed-preview">
+            <div class="screen-bg"></div>
+            <div class="default-screen">
+                <div class="content-wrapper">
+                    <div class="content padding has-header"></div>
+                </div>
+            </div>
+            <div  class="active-preview">
+                <div class="bar bar-header">
+                    <div class="h1 title">{{course.title}}</div>
+                </div>
+                <div class="content has-header" style="overflow-x:scroll;height: 530px">
+                    <div>
+                        <img ng-src="{{course.cover}}" src="{{course.cover}}" class="img-responsive" />
+                    </div>
+                    <div class="panel">
+                        <div class="panel-body course-body">
+                            <h5>{{course.title}}</h5>
+                            <hr/>
+                            <h5>课程介绍</h5>
+                            <p>{{course.summary}}</p>
+                            <div>
+                                <h5>讲师介绍</h5>
+                                <p>{{course.teacher.name}}</p>
+                                <p>{{course.teacher.summary}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

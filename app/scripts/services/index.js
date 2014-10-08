@@ -1,3 +1,7 @@
 define([
-    'services/DemoService'
-],function(){});
+	'services/authorization', 
+	'services/api'], 
+	function() {
+
+	}
+);

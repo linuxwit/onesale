@@ -1,5 +1,5 @@
 define([
-	'services/authorization',
+	'services/AuthService',
 	'services/httpInterceptor',
 	'services/SessionService'
 	], 

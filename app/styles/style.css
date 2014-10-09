@@ -117,12 +117,6 @@ background-size: 0;
 .tab-content{
     margin:auto 10px;
 }
-input.ng-invalid,textarea.ng-invalid {
-  border: 1px solid red;
-}
-input.ng-valid {
-  border: 1px solid green;
-}
 
 body {
     /*background-color: #f8f8f8;*/

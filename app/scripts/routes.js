@@ -5,13 +5,13 @@ define(['app'], function(app) {
 
            // $urlRouterProvider.responseInterceptors.push('httpInterceptor');
 
-            $urlRouterProvider.otherwise('/dashboard');
+            $urlRouterProvider.otherwise('/login');
             $stateProvider.state('login', {
-                url: '/passport/login',
+                url: '/login',
                 templateUrl: 'views/passport/login.html',
                 controller: 'PassportCtrl'
             }).state('logout', {
-                url: '/passport/logout',
+                url: '/logout',
                 templateUrl: 'views/passport/logout.html',
                 controller: 'PassportCtrl'
             }).state('dashboard', {

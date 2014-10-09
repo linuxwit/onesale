@@ -6,7 +6,7 @@ define(["./module"], function(mod) {
                 isAnonymus: true,
                 token: '',
                 currentUser: null,
-                init:function(){
+                init: function() {
                     this.resetSession();
                 },
                 resetSession: function() {

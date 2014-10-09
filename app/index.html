@@ -35,7 +35,7 @@
                     <a class="navbar-brand" href="#/dahboard">OneSale</a>
                 </div>
                 <!-- /.navbar-header -->
-                <ul class="nav navbar-top-links navbar-right">
+                <ul class="nav navbar-top-links navbar-right" ng-hide="!SessionService.isAnonymus">
                     <!-- /.dropdown -->
                     <li class="dropdown">
                         <a class="dropdown-toggle">
@@ -81,13 +81,13 @@
                 </ul>
                 <!-- /.navbar-top-links -->
 
-                <div class="navbar-default sidebar" role="navigation" id='sidebar' ng-include="'views/main/sidebar.html'">
+                <div class="navbar-default sidebar" role="navigation" id='sidebar' ng-hide="!authentication.isAuth" ng-include="'views/main/sidebar.html'">
                     sidebar
                 </div>
                 <!-- /.navbar-static-side -->
             </nav>
-            <div id="page-wrapper" ui-view>
-                Loading...
+            <div class="page-wrapper hide-sidebar" ui-view ng-class="{true: '', false: 'hide-sidebar'}[authentication.isAuth]">
+                
             </div>
             <!-- /#page-wrapper -->
         </div>

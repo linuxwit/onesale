@@ -1,25 +1,32 @@
 {
-    "name": "onsale",
-    "private": true,
-    "version": "1.0",
-    "description": "one sale",
-    "dependencies": {
-        "angular": "*",
-        "bootstrap": "*",
-        "angular-route": "*",
-        "angular-ui": "*",
-        "requirejs": "*",
-        "angular-bootstrap": "*",
-        "angular-animate": "*",
-        "angular-cookie": "*",
-        "font-awesome": "*",
-        "ui-router": "*",
-        "requirejs-domready": "*",
-        "angular-cookies":"1.2",
-        "angular-local-storage":"*",
-        "angular-loading-bar":"*"
-    },
-    "authors": ["witwave <376300248@qq.com>"],
-    "moduleType": ["amd"],
-    "devDependencies": {}
+  "name": "onsale",
+  "private": true,
+  "version": "1.0",
+  "description": "one sale",
+  "dependencies": {
+    "angular": "*",
+    "bootstrap": "*",
+    "angular-route": "*",
+    "angular-ui": "*",
+    "requirejs": "*",
+    "angular-bootstrap": "*",
+    "angular-animate": "*",
+    "angular-cookie": "*",
+    "font-awesome": "*",
+    "ui-router": "*",
+    "requirejs-domready": "*",
+    "angular-cookies": "1.2",
+    "angular-local-storage": "*",
+    "angular-loading-bar": "*"
+  },
+  "authors": [
+    "witwave <376300248@qq.com>"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "devDependencies": {},
+  "resolutions": {
+    "angular": "1.2.26"
+  }
 }

@@ -4,7 +4,7 @@ require.config({
         // 'jquery': '../bower_components/jquery/jquery',
         angular: '../bower_components/angular/angular',
         // 'kendo': '../lib/kendo.all.min',
-        uiRoute: '../bower_components/angular-ui-router/release/angular-ui-router',
+        uiRoute: '../bower_components/ui-router/release/angular-ui-router',
       //  ngRoute:'../bower_components/angular-route/angular-route',
         uiBootstrap: '../bower_components/angular-bootstrap/ui-bootstrap-tpls',
         ngCookies: '../bower_components/angular-cookie/angular-cookie'

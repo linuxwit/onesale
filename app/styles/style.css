@@ -1,9 +1,13 @@
 @import"../bower_components/bootstrap/dist/css/bootstrap.css";
 @import"../bower_components/font-awesome/css/font-awesome.css";
 @import"./timeline.css";
+
+
+
 .nav, .pagination, .carousel, .panel-title a {
     cursor: pointer;
 }
+
 .device-preview {
     position: absolute;
     right: 0;
@@ -131,19 +135,24 @@ background: none repeat scroll 0 0 #393939;
 #header, #sidebar {
     background: none repeat scroll 0 0 #393939;
 }
-#page-wrapper {
+.page-wrapper {
     padding: 0 15px;
     min-height: 800px;
     background-color: #fbfbfb;
 }
 @media(min-width: 768px) {
-    #page-wrapper {
+    .page-wrapper {
         position: inherit;
         margin: 0 0 0 180px;
         padding: 0 30px;
         border-left: 1px solid #e7e7e7;
    }
 }
+
+.hide-sidebar:{
+    margin-left: 0;
+}
+
 .navbar-top-links li {
     display: inline-block;
 }

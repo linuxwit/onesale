@@ -5,7 +5,7 @@ define(['app'], function(app) {
 
            // $urlRouterProvider.responseInterceptors.push('httpInterceptor');
 
-            //$urlRouterProvider.otherwise('/dashboard');
+            $urlRouterProvider.otherwise('/dashboard');
             $stateProvider.state('login', {
                 url: '/passport/login',
                 templateUrl: 'views/passport/login.html',
@@ -83,7 +83,7 @@ define(['app'], function(app) {
 */
             //http://plnkr.co/edit/IzimSVsstarlFviAm7S7?p=preview
             //http://scotch.io/tutorials/javascript/angular-routing-using-ui-router#reader-mode
-            $httpProvider.html5Mode(true);
+           // $httpProvider.html5Mode(true);
         }
     ]);
 });
